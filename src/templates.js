@@ -38,7 +38,7 @@ export default {
   wrapper: (content='') => `<div class="majores-map__wrapper">${content}</div>`,
 
   /**
-   * Map - GoogleMap webcomponent
+   * Map section - GoogleMap webcomponent
    * @param {Array}   unis
    * @param {String}  key
    */
@@ -67,15 +67,31 @@ export default {
     <div>
       <img src="${uni.logo}" alt="${uni.university}" />
       <span>${uni.description}</span>
-      <p onclick="MajoresMapWidget.exploreUni(${index})">Studenti</p>
+      <p onclick="MajoresMap.exploreUni(${index})">Studenti</p>
     </div>
   `,
+
+  /**
+   * Info section
+   * @param {String}  single
+   */
+  info: (single='',list='') => `
+    <section class="info__wrapper">
+      <!-- TODO could it be just a popup? -->
+      <div class="info__container info__container--student">
+        ${single}
+      </div>
+      <div class="info__container info__container--list">
+        ${list}
+      </div>
+    </section>
+  `
 
   /**
    * Student view
    * @param {Object}  student
    */
-  studentBox: (student={}) => `
+  studentDetails: (student={}) => `
     <img src="${student.image}" alt="${student.name}" />
     <p>${student.name} - ${student.diploma}</p>
     <p>${student.university}</p>
@@ -87,5 +103,33 @@ export default {
     `).join('') : ''}
     </p>
   `,
+
+  /**
+   * Student view
+   * @param {Object}  student
+   */
+  studentBox: (student={}) => `
+    <div class="info__container__item">
+      <img src="${student.image}" alt="${student.name}" />
+      <p>${student.name} - ${student.diploma}</p>
+    </div>
+  `,
+
+  /**
+   * Credits section
+   * @param {Object}  credits
+   */
+  credits: (credits={}) => `
+    <section class="credits__wrapper">
+      <div class="credits__container">
+        <img src="" alt="Matteo Redaelli" />
+        <p>${credits.matteo}</p>
+      </div>
+      <div class="credits__container">
+        <img src="" alt="Riccardo Galli" />
+        <p>${credits.riccardo}</p>
+      </div>
+    </section>
+  `
 
 }
