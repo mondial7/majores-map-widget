@@ -1,13 +1,16 @@
-# My Bae
-Something about my dev stack
+# majores-map-widget
+Widget for https://majores.liceodesio.gov.it/
+
+build with https://github.com/mondial7/my-bae
 
 ## Install
 
 clone this 👾
 ```
-git clone https://github.com/mondial7/my-bae.git
-cd my-bae
+git clone https://github.com/mondial7/majores-map-widget.git
+cd majores-map-widget
 npm install
+npm update
 ```
 
 ## Developing
@@ -17,7 +20,7 @@ npm run forest
 ```
 (... gonna watch you 🧐)
 
-## Testing 
+## Testing
 
 ```
 npm test
