@@ -9,8 +9,12 @@ export default class App {
    */
   constructor(dom, anchor) {
     // generate template
-    let html = ''
-    // TODO ...
+    let html = template.wrapper([
+      template.map(data.universities),
+      // initial template info will be empty
+      template.info(),
+      template.credits(data.credits),
+    ].join(''))
     if (dom && anchor && dom.querySelector(anchor)) {
       // define pointers to DOM elements
       const STUDENT_CARD = dom.querySelector('info__container--student');
