@@ -1,6 +1,8 @@
-const MAJORE_MAP_DATA = [
+export default [
   {
     university: 'Free University of Bolzano Bozen',
+    latitude: '',
+    longitude: '',
     logo: 'https://upload.wikimedia.org/wikipedia/commons/6/6d/UniBZ-Logo.svg',
     description: 'aodoaskd aosd kmasdkmaskd msakmdoadamod asodkoasmdkomasokd',
     students: [

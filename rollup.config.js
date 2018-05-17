@@ -8,13 +8,13 @@ import license from 'rollup-plugin-license';
 import path from 'path';
 
 export default {
-  input: 'src/knopfy-dope.js',
+  input: 'src/app.js',
   output: {
-    file: 'dist/knopfy-dope.js',
+    file: 'dist/majores-map-widget.js',
     format: 'iife',
     sourcemap: true,
   },
-  name: 'KnopfyDope',
+  name: 'MajoresMapWidget',
   plugins: [
     filesize(),
     eslint(),
