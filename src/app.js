@@ -18,7 +18,9 @@ export default class App {
       // register event lister
       // TODO
       // append widget
-      dom.querySelector(anchor).insertAdjacentHTML('beforeend', html)
+      const CONTAINER = dom.querySelector(anchor)
+      CONTAINER.innerHTML = ''
+      CONTAINER.insertAdjacentHTML('beforeend', html)
     } else {
       console.warn('Missing parameters or anchor not found')
     }

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+    <script>
+    // Loader
+    (function(dom, anchor){
+      let s = dom.createElement('script')
+      s.defer = true
+      s.async = true
+      s.src = '../dist/majores-map-widget.js'
+      s.onload = () => {
+        window.MajoresMap = new MajoresMapWidget(dom, anchor)
+      }
+      (dom.head || dom.getElementsByTagName('head')[0]).appendChild(s)
+    }(document, '.container'))
+    </script>
+
+    <title>Demo</title>
+  </head>
+  <body>
+
+    <div class="container"></div>
+
+  </body>
+</html>
